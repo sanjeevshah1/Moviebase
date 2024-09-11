@@ -18,8 +18,9 @@ const MovieSearch = ({searchQuery, setSearchQuery} : MovieSearchProps) => {
                 placeholder="i.e. Jurassic Park"
                 onChange={handleChange}
                 value={searchQuery}
+                className="bounce-top"
                 />
-            <button className="button">Search</button>
+            {/* <button className="button">Search</button> */}
         </form>
     </>
   )

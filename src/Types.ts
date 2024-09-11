@@ -24,3 +24,9 @@ export type MovieSearchProps = {
 export type MoreProps = {
     setPage: React.Dispatch<React.SetStateAction<number>>; // Type for the setPage function that updates a number state
 };
+
+export type OutletContextType = {
+    searchQuery: string;
+    page: number;
+  }
+  
