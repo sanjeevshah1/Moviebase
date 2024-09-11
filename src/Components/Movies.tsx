@@ -3,7 +3,7 @@ import useFetch from "../useFetch.tsx"
 import { useOutletContext } from "react-router-dom"
 import { OutletContextType } from "../Types.ts"
 const Movies = () => {
-    const {searchQuery, page} = useOutletContext<OutletContextType>()
+    const {page, searchQuery} = useOutletContext<OutletContextType>()
     const {movies, isLoading, error} = useFetch(searchQuery,page)
     if(error) return (
         <h2>Error</h2>
