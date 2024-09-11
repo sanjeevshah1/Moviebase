@@ -1,3 +1,4 @@
+
 export type ErrorType = {
     message: string;
     statusText: string;
@@ -13,4 +14,9 @@ export type MovieCardProps = {
     date: string;
     rating: string; 
     about: string;
+}
+
+export type MovieSearchProps = {
+    searchQuery: string;
+    setSearchQuery: (query: string) => void;
 }

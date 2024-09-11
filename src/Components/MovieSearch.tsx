@@ -1,8 +1,12 @@
-import { ChangeEvent, FormEvent, useState } from "react"
-const MovieSearch = ({handleChange, searchQuery, setSearchQuery}) => {
+import {ChangeEvent, FormEvent} from "react"
+import { MovieSearchProps } from "../Types";
+const MovieSearch = ({searchQuery, setSearchQuery} : MovieSearchProps) => {
     const handleSubmit = (event:FormEvent<HTMLFormElement>) => {
         event?.preventDefault();
         console.log("done")
+    }
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(event.target.value);
     }
   return (
     <>

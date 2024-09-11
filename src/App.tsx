@@ -5,14 +5,10 @@ import Movies from './Components/Movies'
 import { useState } from 'react'
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
-  const handleChange = (event: any) => {
-      setSearchQuery(event.target.value)
-  }
-  console.log(searchQuery)
   return (
     <div className='moviebase'>
       <Header />
-      <MovieSearch handleChange = {handleChange} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
+      <MovieSearch searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
       <Movies searchQuery = {searchQuery}/>
     </div>
   )
