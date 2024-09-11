@@ -6,6 +6,7 @@ export type ErrorType = {
 }
 export type searchProps = {
     searchQuery: string;
+    page:number;
 }
 
 export type MovieCardProps = {
@@ -20,3 +21,6 @@ export type MovieSearchProps = {
     searchQuery: string;
     setSearchQuery: (query: string) => void;
 }
+export type MoreProps = {
+    setPage: React.Dispatch<React.SetStateAction<number>>; // Type for the setPage function that updates a number state
+};
