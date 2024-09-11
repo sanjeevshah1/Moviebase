@@ -6,3 +6,11 @@ export type ErrorType = {
 export type searchProps = {
     searchQuery: string;
 }
+
+export type MovieCardProps = {
+    imgUrl: string;
+    title: string;
+    date: string;
+    rating: string; 
+    about: string;
+}
