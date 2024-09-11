@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 import { ErrorType } from './Types';
 
 const useFetch = (query: string) => {
-  const apiKey = "2320bb2af5467efef92e43db66c51bc8";
+  const apiKey = import.meta.env.VITE_API_KEY;
+
+
   const apiUrl = query ? `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=1&include_adult=false` : `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query="jurassic"&page=1&include_adult=false` ;
 
   const [movies, setMovies] = useState<any>(null); // Change to appropriate type if known
