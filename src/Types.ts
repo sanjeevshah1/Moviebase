@@ -32,3 +32,10 @@ export interface FetchResult {
     isLoading: boolean;
     error: any;
   }
+
+// src/Types.ts
+export interface OutletContextType {
+    searchQuery: string;
+    page: number;
+  }
+  

@@ -4,14 +4,14 @@ import MovieSearch from './Components/MovieSearch'
 import More from './Components/More'
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-// import { OutletContextType } from './Types'
+import { OutletContextType } from './Types'
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
-  const outletContext:any = {
-    page,
+  const outletContext: OutletContextType = {
     searchQuery,
-  }
+    page,
+  };
   console.log(page)
   return (
     <div className='moviebase'>
