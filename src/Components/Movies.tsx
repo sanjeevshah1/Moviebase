@@ -1,9 +1,9 @@
 import MovieCard from "./MovieCard"
 import useFetch from "../useFetch.tsx"
 import { useOutletContext } from "react-router-dom"
-import { OutletContextType } from "../Types.ts"
+// import { OutletContextType } from "../Types.ts"
 const Movies = () => {
-    const {page, searchQuery} = useOutletContext<OutletContextType>()
+    const {searchQuery, page} = useOutletContext<any>()
     const {movies, isLoading, error} = useFetch(searchQuery,page)
     if(error) return (
         <h2>Error</h2>
