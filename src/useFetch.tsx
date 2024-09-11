@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { ErrorType} from './Types';
+import { ErrorType, FetchResult} from './Types';
 
-const useFetch = (query: string, page:number) => {
+const useFetch = (query: string, page:number):FetchResult => {
   const apiKey = import.meta.env.VITE_API_KEY;
 
 

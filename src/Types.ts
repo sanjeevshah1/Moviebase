@@ -25,8 +25,13 @@ export type MoreProps = {
     setPage: React.Dispatch<React.SetStateAction<number>>; // Type for the setPage function that updates a number state
 };
 
-export type OutletContextType = {
-    searchQuery: string;
+export interface OutletContextType {
     page: number;
+    searchQuery: string;
   }
   
+export interface FetchResult {
+    movies: any[];
+    isLoading: boolean;
+    error: any;
+  }
