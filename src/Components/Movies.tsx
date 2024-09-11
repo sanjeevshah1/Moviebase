@@ -4,7 +4,8 @@ import { useOutletContext } from "react-router-dom"
 import { OutletContextType } from "../Types.ts"
 // import { OutletContextType } from "../Types.ts"
 const Movies = () => {
-    const { searchQuery, page } = useOutletContext<OutletContextType>();
+    const OutletContext:OutletContextType = useOutletContext();
+    const {searchQuery, page} = OutletContext
     const {movies, isLoading, error} = useFetch(searchQuery,page)
     if(error) return (
         <h2>Error</h2>

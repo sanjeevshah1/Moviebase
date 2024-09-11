@@ -10,9 +10,9 @@ createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App/>}>
-          <Route index element={<Movies searchQuery={''} page={0}/>}/>
+          <Route index element={<Movies />}/>
         </Route>
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )
