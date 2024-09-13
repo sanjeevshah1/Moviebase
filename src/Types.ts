@@ -25,6 +25,7 @@ export type MovieSearchProps = {
 }
 export type MoreProps = {
     setPage: React.Dispatch<React.SetStateAction<number>>; // Type for the setPage function that updates a number state
+    size: number;
 };  
 
 
@@ -41,6 +42,7 @@ export interface OutletContextType {
     page: number;
     filterLang: string,
     setFilterLang: ([language]: string) => void;
+    setSize: ([]: number) => void
   }
   
 export type Movie = {

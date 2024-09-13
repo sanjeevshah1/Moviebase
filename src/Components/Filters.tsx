@@ -2,10 +2,9 @@ import { Movie } from "../Types";
 import { FiltersProps } from "../Types";
 import { Languages } from "../Languages";
 
-const Filters = ({ movies, setFilterLang }: FiltersProps) => {
+const Filters = ({ movies,filterLang, setFilterLang }: FiltersProps) => {
     const uniqueLanguages = new Set(movies.map((movie: Movie) => movie.original_language));
-    console.log("unique languages:", uniqueLanguages);
-
+    
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         const selectedLanguage = event.currentTarget.getAttribute("data-language");
         if (selectedLanguage) {
@@ -28,7 +27,7 @@ const Filters = ({ movies, setFilterLang }: FiltersProps) => {
                         </button>
                     ))}
                 </div>
-            <button className="clear" style={{marginLeft:"auto", marginRight:"40px"}} onClick={() => setFilterLang("")}>Clear filter......</button>
+            {filterLang && <button className="clear" style={{marginLeft:"auto", marginRight:"40px"}} onClick={() => setFilterLang("")}>Clear filter......</button>}
             </div>
         </div>
     );

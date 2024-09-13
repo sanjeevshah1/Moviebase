@@ -8,12 +8,10 @@ const useFetch = (query: string, page:number):FetchResult => {
   const apiUrl = query ? `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=${page}&include_adult=false` : `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query="jurassic"&page=${page}&include_adult=false` ;
 
   const [movies, setMovies] = useState<{}[]>([]); // Change to appropriate type if known
-  console.log(typeof(movies))
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<ErrorType | null>(null);
 
   useEffect(() => {
-    console.log("page changed")
     const fetchData = async () => {
       try {
         const response = await fetch(apiUrl);

@@ -3,7 +3,6 @@ import { MovieSearchProps } from "../Types";
 const MovieSearch = ({searchQuery, setSearchQuery,setFilterLang} : MovieSearchProps) => {
     const handleSubmit = (event:FormEvent<HTMLFormElement>) => {
         event?.preventDefault();
-        console.log("done")
     }
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(event.target.value);
@@ -15,6 +14,7 @@ const MovieSearch = ({searchQuery, setSearchQuery,setFilterLang} : MovieSearchPr
             <label htmlFor="query">Movie Name</label>
             <input 
                 type="text"
+                id="query"
                 name="query"
                 placeholder="i.e. Jurassic Park"
                 onChange={handleChange}
