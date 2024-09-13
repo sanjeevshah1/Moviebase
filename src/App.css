@@ -318,6 +318,7 @@ button{
 .filter-container h2{
   margin-bottom: 15px;
 }
+
 .filters button{
   color: white;
   border-color: whitesmoke;
@@ -325,6 +326,10 @@ button{
   padding: 8px;
   padding-left: 10px;
   padding-right: 10px;
+}
+.clear{
+  border: none;
+  font-size: 1.1rem;
 }
 @media screen and (min-width: 675px) {
   .movies{

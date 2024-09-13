@@ -1,12 +1,13 @@
 import {ChangeEvent, FormEvent} from "react"
 import { MovieSearchProps } from "../Types";
-const MovieSearch = ({searchQuery, setSearchQuery} : MovieSearchProps) => {
+const MovieSearch = ({searchQuery, setSearchQuery,setFilterLang} : MovieSearchProps) => {
     const handleSubmit = (event:FormEvent<HTMLFormElement>) => {
         event?.preventDefault();
         console.log("done")
     }
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(event.target.value);
+        setFilterLang("");
     }
   return (
     <>
@@ -20,7 +21,6 @@ const MovieSearch = ({searchQuery, setSearchQuery} : MovieSearchProps) => {
                 value={searchQuery}
                 className="bounce-top"
                 />
-            {/* <button className="button">Search</button> */}
         </form>
     </>
   )

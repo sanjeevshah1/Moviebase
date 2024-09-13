@@ -20,6 +20,8 @@ export type MovieCardProps = {
 export type MovieSearchProps = {
     searchQuery: string;
     setSearchQuery: (query: string) => void;
+    filterLang: string;
+    setFilterLang: ([language]: string) => void;
 }
 export type MoreProps = {
     setPage: React.Dispatch<React.SetStateAction<number>>; // Type for the setPage function that updates a number state
@@ -37,6 +39,8 @@ export interface FetchResult {
 export interface OutletContextType {
     searchQuery: string;
     page: number;
+    filterLang: string,
+    setFilterLang: ([language]: string) => void;
   }
   
 export type Movie = {
@@ -45,4 +49,6 @@ export type Movie = {
   
 export type FiltersProps = {
     movies: Movie[];
+    filterLang: string;
+    setFilterLang: ([language]: string) => void
   };
