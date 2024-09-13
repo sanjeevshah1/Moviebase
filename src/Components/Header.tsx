@@ -1,7 +1,8 @@
 const Header = () => {
   return (
     <div className='header'>
-        <h1>React Movie Search</h1>
+        <h1>Movie Ghar</h1>
+        <p>.....(Let's Search)</p>
     </div>
   )
 }

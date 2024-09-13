@@ -68,9 +68,10 @@ form, input, label, button {
   box-sizing: border-box;
 }
 input{
+  outline: none;
   width: 50%;
   max-width: 250px;
-  border:3px solid black;
+  border:3px solid white;
   border-radius: 8px;
   padding: 4px;
   padding-left: 10px;
@@ -81,17 +82,21 @@ button{
   padding: 5px;
   border-radius: 5px
 }
+.movies{
+  width: 97%;
+  margin: 0 auto;
+}
 .movie-card{
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 600px;
   overflow: hidden;
   row-gap: 10px;
   padding: 30px;
   margin: 0 auto;
   margin-top: 30px;
   width: 85%;
-  max-width: 450px;
+  max-width: 430px;
   padding-bottom: 50px;
 background: rgba(175, 34, 132, 0.07);
 border-radius: 16px;
@@ -103,13 +108,25 @@ border: 1px solid rgba(175, 34, 132, 0.35);
 .movie-card:hover{
   scale: 1.05;
 }
-
+button{
+  cursor: pointer;
+}
 
 .movie-card img{
   margin: 0 auto;
   border-radius: 10px;
   size: 50%;
   width: 50%;
+}
+.movie-card h2{
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.movie-card p{
+  font-weight: 200;
+ letter-spacing: 2px;
+ margin: 3px;
 }
 .moviebase{
   background-image: url("./../public/cinema-5069314_640.jpg");
@@ -277,6 +294,38 @@ border: 1px solid rgba(175, 34, 132, 0.35);
   }
 }
 
+.more{
+  /* border: 2px solid white; */
+  margin: 0 auto;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more > button{
+  border-color: white;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+}
+.flex{
+  display: flex;
+}
+.filter-container{
+  padding-left: 40px;
+}
+.filter-container h2{
+  margin-bottom: 15px;
+}
+.filters button{
+  color: white;
+  border-color: whitesmoke;
+  margin-left: 20px;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 @media screen and (min-width: 675px) {
   .movies{
     display: flex;
