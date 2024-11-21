@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Movie = () => {
   const navigate = useNavigate();
   const passedState = useLocation().state;
-  const { searchQuery} = passedState || {};
+  const { searchQuery, language} = passedState || {};
   const apiKey = import.meta.env.VITE_API_KEY;
   const {id} = useParams();
   interface Genre {
@@ -59,7 +59,7 @@ const Movie = () => {
   const handleBack = () => {
     // If searchQuery and movies are available, navigate with state
     if (searchQuery) {
-      navigate("/", { state: { searchQuery } });
+      navigate("/", { state: { searchQuery, language } });
     } else {
       // Fallback to default back navigation
       navigate(-1);

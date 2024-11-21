@@ -1,12 +1,12 @@
 import {ChangeEvent, FormEvent} from "react"
 import { MovieSearchProps } from "../Types";
-const MovieSearch = ({searchQuery, setSearchQuery,setFilterLang} : MovieSearchProps) => {
+const MovieSearch = ({searchQuery, setSearchQuery, setSearchParams} : MovieSearchProps) => {
     const handleSubmit = (event:FormEvent<HTMLFormElement>) => {
         event?.preventDefault();
     }
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(event.target.value);
-        setFilterLang("");
+        setSearchParams({language:""});
     }
   return (
     <>

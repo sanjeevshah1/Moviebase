@@ -21,7 +21,7 @@ export type MovieSearchProps = {
     searchQuery: string;
     setSearchQuery: (query: string) => void;
     filterLang: string;
-    setFilterLang: ([language]: string) => void;
+    setSearchParams: ({ language }: { language: string }) => void;
 }
 export type MoreProps = {
     setPage: React.Dispatch<React.SetStateAction<number>>; // Type for the setPage function that updates a number state
@@ -49,8 +49,8 @@ export type Movie = {
     original_language: string;
   };
   
-export type FiltersProps = {
+  export type FiltersProps = {
     movies: Movie[];
     filterLang: string;
-    setFilterLang: ([language]: string) => void
+    setSearchParams: ({ language }: { language: string }) => void;  // Corrected the function signature
   };
