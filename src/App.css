@@ -410,9 +410,9 @@ button{
   text-decoration: none;
 }
 
-.movie-details a:hover {
+/* .movie-details a:hover {
   text-decoration: underline;
-}
+} */
 .temp{
   position: absolute;
   top: 20px;
@@ -432,4 +432,11 @@ button{
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 10px;
+}
+.movie-card a {
+  color: white;
+  text-decoration: none;
+}
+.movies a {
+  text-decoration: none;
 }
