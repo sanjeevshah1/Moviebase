@@ -22,15 +22,17 @@ const Filters = ({ movies,filterLang, setSearchParams }: FiltersProps) => {
                             data-language={language}
                             key={language}
                             onClick={handleClick}
+                            style={{backgroundColor: language === filterLang ? "whitesmoke" : "transparent", color: language === filterLang ? "black" : "white"}}
                         >
                             {Languages[language] ? Languages[language] : "Unknown"}
                         </button>
                     ))}
                 </div>
-            {filterLang && <button className="clear" style={{marginLeft:"auto", marginRight:"40px"}} 
+            {filterLang && 
+            <button className="clear" style={{marginLeft:"auto", marginRight:"40px"}} 
                 onClick={
                     () => setSearchParams({language:""})
-                }>Clear filter......</button>}
+                }>Clear filter</button>}
             </div>
         </div>
     );

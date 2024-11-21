@@ -1,35 +1,15 @@
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { MovieType } from "../Types";
 const Movie = () => {
   const navigate = useNavigate();
   const passedState = useLocation().state;
   const { searchQuery, language} = passedState || {};
   const apiKey = import.meta.env.VITE_API_KEY;
   const {id} = useParams();
-  interface Genre {
-    id: number;
-    name: string;
-  }
-  
-  interface MovieData {
-    backdrop_path: string;
-    poster_path: string;
-    title: string;
-    tagline: string;
-    overview: string;
-    release_date: string;
-    runtime: number;
-    genres: Genre[];
-    budget: number;
-    revenue: number;
-    imdb_id: string;
-    homepage: string;
-    vote_average: number;
-    vote_count: number;
-  }
   const apiUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
-  const [movie, setMovie] = useState<MovieData>({
+  const [movie, setMovie] = useState<MovieType>({
     backdrop_path: "",
     poster_path: "",
     title: "",
@@ -49,7 +29,7 @@ const Movie = () => {
     const response = await fetch(apiUrl);
     const data = await response.json();
     setMovie(data);
-    // console.log(data.overview);
+
   }
   console.log(movie)
   useEffect(() => {
@@ -59,7 +39,7 @@ const Movie = () => {
   const handleBack = () => {
     // If searchQuery and movies are available, navigate with state
     if (searchQuery) {
-      navigate("/", { state: { searchQuery, language } });
+      navigate("..", { state: { searchQuery, language } });
     } else {
       // Fallback to default back navigation
       navigate(-1);

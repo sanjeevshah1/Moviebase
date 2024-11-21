@@ -54,3 +54,25 @@ export type Movie = {
     filterLang: string;
     setSearchParams: ({ language }: { language: string }) => void;  // Corrected the function signature
   };
+
+  export interface Genre {
+    id: number;
+    name: string;
+  }
+  
+  export interface MovieType {
+    backdrop_path: string;
+    poster_path: string;
+    title: string;
+    tagline: string;
+    overview: string;
+    release_date: string;
+    runtime: number;
+    genres: Genre[];
+    budget: number;
+    revenue: number;
+    imdb_id: string;
+    homepage: string;
+    vote_average: number;
+    vote_count: number;
+  }
