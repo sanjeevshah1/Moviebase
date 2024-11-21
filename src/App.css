@@ -40,7 +40,7 @@ select {
     font: inherit;
 }
 .moviebase{
-  background-color: pink;
+  background-color:transparent;
 }
 .header{
   display: flex;
@@ -48,8 +48,10 @@ select {
   align-items: center;
   padding: 20px;
 }
-.header h1{
+.header a{
   color: white;
+  text-decoration: none;
+  font-size: 2rem;
 }
 .form{
   /* border: 1px solid black; */
@@ -336,4 +338,98 @@ button{
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+.movie-container {
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+}
+
+.movie-backdrop {
+  min-height: 100dvh;
+  min-width: 100vw;
+  background-image: url('./../public/cinema-5069314_640.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-backdrop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.movie-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.movie-poster img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 300px;
+  width: 100%;
+}
+
+.movie-details {
+  max-width: 800px;
+}
+
+.movie-details h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-details .tagline {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.movie-details p {
+  margin: 0.5rem 0;
+}
+
+.movie-details a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.movie-details a:hover {
+  text-decoration: underline;
+}
+.temp{
+  position: absolute;
+  top: 20px;
+  left: 40.101%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+}
+.temp a{
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.back{
+  color: white;
+  border: 1px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
 }

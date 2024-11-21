@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
+
 const Header = () => {
   return (
     <div className='header'>
-        <h1>Movie Ghar</h1>
+        <Link to="/">Movie Ghar</Link>
         <p>.....(Let's Search)</p>
     </div>
   )

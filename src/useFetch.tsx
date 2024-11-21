@@ -5,7 +5,8 @@ const useFetch = (query: string, page:number):FetchResult => {
   const apiKey = import.meta.env.VITE_API_KEY;
 
 
-  const apiUrl = query ? `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=${page}&include_adult=false` : `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query="jurassic"&page=${page}&include_adult=false` ;
+  // const apiUrl = query ? `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=${page}&include_adult=false` : `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query="jurassic"&page=${page}&include_adult=false` ;
+  const apiUrl = query ? `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=${page}&include_adult=false` : `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
 
   const [movies, setMovies] = useState<{}[]>([]); // Change to appropriate type if known
   const [isLoading, setIsLoading] = useState(true);
